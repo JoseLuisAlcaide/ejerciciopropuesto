@@ -1,50 +1,23 @@
+// let textUser ="aedaadeaaadeaa".split("");
+// let letraUser = "a";
 
+const textUser =prompt(`Itroduzca un texto`).split("");
+const letraUser = prompt(`Introduzca letra consecutiva a buscar`);
 
-   
-
-// let textUser =prompt(`texto`).split("");
-// let letraUser = prompt();
-
-let textUser ="aaadeaa".split("");
-let letraUser = "a";
-let nLetra = 0
-let nConsecutivos=0;
-
-
-console.log(textUser);
+let contadorFinal=0;
+let contadorTemp=0;
 
 for (i=0 ; i<textUser.length ; i++)
-if (textUser[i]==textUser[i+1]){
-    // let nConsecutivos=0
-    console.log(`consecutivo`)
-    nConsecutivos++
-    console.log(nConsecutivos)
-    }else {
-        console.log(`no consecutivo`)
-    
+if (textUser[i]===letraUser){
+    contadorTemp++;
+    if(contadorTemp>=contadorFinal){
+        contadorFinal=contadorTemp;
     }
-
-
-
-function contar(cadena,letra) {
-    let posicion=cadena.indexOf(letra);
-    let cuenta=0
-    while (posicion != -1) {
-        console.log(posicion,letra)
-        cuenta++
-        posicion=cadena.indexOf(letra, posicion+1)
-    }
-    console.log(cuenta);
-    return cuenta
+}else{
+    contadorTemp=0;
 }
 
-
-for (i=0;i<letraUser.length;i++)
- nLetra+=contar(textUser,letraUser[i])
-
-console.log("El numero de veces que aparece la letra A es "+contar("A"))
-
-console.log(nLetra)
-
-document.write(`<p style="color:green">${textUser}</p>`)
-document.write(`<p>Las veces que aparece la letra ${letraUser} es ${nLetra}</p>`)
+console.log(textUser);
+console.log(contadorTemp);
+console.log(contadorFinal);
+document.write(`El numero de veces máximo consecutivo que se repite "${letraUser}" en el texto "${textUser}" es ${contadorFinal} veces`);
