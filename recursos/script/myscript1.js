@@ -1,8 +1,8 @@
 
 // const textUser = prompt(`Introduzca un texto`,`abaabaaaabaaaba`).split("");
 // const letraUser = prompt(`letra a buscar`, `a`);
-const textUser = prompt(`Introduzca un texto`,"abaabaaaabaaaba").split("");
-const letraUser = prompt(`letra a buscar`, "a");
+const textUser = prompt(`Introduzca un texto`).split("");
+const letraUser = prompt(`letra a buscar`);
 let contFinal = 0;
 let contTemporal = 0;
 
