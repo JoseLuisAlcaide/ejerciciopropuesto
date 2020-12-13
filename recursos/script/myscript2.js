@@ -1,22 +1,22 @@
 
-const texto = prompt(`introduszca una cadena de texto`,`ABBBAACCCCCCCAAAAAA`);
+const texto = prompt(`introduszca una cadena de texto`,`AAAAAAAABBBAACCCCCCCAAAAAA`);
 const textUser = texto.split("");
-let nLetra="";
+let nLetra=textUser[0];
 let maxLetra="";
-let contTemporal = 0;
+let contTemporal = 1;
 let contFinal = 0;
 console.log(textUser);
 
-for(i=0 ; i<textUser.length ; i++)
+for(i=1 ; i<textUser.length ; i++)
 if (textUser[i]===nLetra){
     contTemporal++;
     if (contTemporal>=contFinal){
         maxLetra=nLetra;
-        contFinal=contTemporal+1;
+        contFinal=contTemporal;
     }
 }else{
     nLetra = textUser[i];
-    contTemporal=0;
+    contTemporal=1;
     console.log(nLetra);
     
 }
